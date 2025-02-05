@@ -1,0 +1,105 @@
+<div *ngIf="track$ | async as track; else loading" class="h-[33.5rem] overflow-hidden bg-gradient-to-b from-teal-900 to-teal-500">
+  <ng-container class="w-full">
+    <div class="flex bg-transparent rounded-2xl text-white h-screen w-full">
+      <!-- Left Content Section -->
+      <div class="flex items-center text-center lg:text-left px-8 lg:w-1/2">
+        <div class="flex-col w-full space-y-6">
+          <!-- Header Section with Animation -->
+          <div class="flex w-full justify-between items-center transform hover:scale-105 transition-transform duration-300">
+            <h2 class="text-3xl font-semibold md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-emerald-200">
+            {{ track.title }}
+            </h2>
+            <div class="flex items-center">
+              <span class="bg-teal-200/20 capitalize text-teal-100 text-xs font-medium px-2.5 py-0.5 rounded-full backdrop-blur-sm">
+                {{ "track.category" }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Artist Info with Hover Effect -->
+          <div class="space-y-2 hover:translate-x-2 transition-transform duration-300">
+            <p class="text-sm md:text-sm">
+              <span class="text-teal-300">By</span>
+              <span class="font-medium hover:text-teal-200 transition-colors">{{ "track.artist" }}</span>
+            </p>
+            <p class="text-sm md:text-sm">
+              <span class="text-teal-300">Created At </span>
+              <span class="text-teal-100/80">{{ "track.createdAt | date" }}</span>
+            </p>
+          </div>
+
+          <!-- Description with Gradient Border -->
+          <div class="relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-transparent hover:border-teal-300/30 transition-all duration-300">
+            <p class="text-sm md:text-base leading-relaxed text-teal-50">{{ "track.description" }}</p>
+          </div>
+
+          <!-- Audio Player Section -->
+          <div class="w-full max-w-2xl mx-auto">
+            <div class="bg-teal-800/30 backdrop-blur-md rounded-xl p-6 shadow-lg hover:shadow-teal-300/10 transition-all duration-300">
+              <!-- Custom Controls -->
+              <div class="space-y-4">
+                <!-- Time and Progress -->
+                <div class="flex items-center gap-4">
+                  <span class="text-xs text-teal-200">0:00</span>
+                  <div class="flex-1 h-1 bg-teal-900/50 rounded-full overflow-hidden">
+                    <div class="h-full w-0 bg-teal-300 rounded-full transition-all duration-300 hover:bg-teal-200"></div>
+                  </div>
+                  <span class="text-xs text-teal-200">3:45</span>
+                </div>
+
+                <!-- Audio Element -->
+                <audio controls class="w-full focus:outline-none [&::-webkit-media-controls-panel]:bg-teal-900/50 [&::-webkit-media-controls-panel]:rounded-lg">
+                  <source src="assets/audio/chaba.mp3">
+                  Your browser does not support the audio element.
+                </audio>
+
+                <!-- Interactive Buttons -->
+                <div class="flex justify-center gap-6 pt-2">
+                  <button class="text-teal-200 hover:text-teal-100 transition-colors">
+                    <i class="fas fa-step-backward text-xl"></i>
+                  </button>
+                  <button class="text-white hover:text-teal-100 transition-colors">
+                    <i class="fas fa-play-circle text-3xl"></i>
+                  </button>
+                  <button class="text-teal-200 hover:text-teal-100 transition-colors">
+                    <i class="fas fa-step-forward text-xl"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Image Section with New Styling -->
+      <div class="hidden lg:block lg:w-1/2" style="clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0 100%)">
+        <div class="relative h-full group">
+          <!-- Main Image -->
+          <div class="h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+               style="background-image: url('/assets/images/day.jpg')">
+            <!-- Overlay Layers -->
+            <div class="absolute inset-0 bg-gradient-to-r from-teal-900/90 via-teal-800/50 to-transparent
+                        group-hover:from-teal-900/70 group-hover:via-teal-800/30 transition-all duration-500"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-teal-900/90 via-transparent to-transparent"></div>
+
+            <!-- Optional: Decorative Elements -->
+            <div class="absolute inset-0 opacity-30 mix-blend-overlay bg-gradient-to-br from-teal-100/10 via-transparent to-teal-900/10"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- Not Found Template -->
+  <ng-template #notfound>
+    <div class="flex items-center justify-center h-screen">
+      <div class="text-center space-y-4">
+        <i class="fas fa-music-slash text-6xl text-teal-300"></i>
+        <p class="text-xl text-teal-50">Track not found</p>
+      </div>
+    </div>
+  </ng-template>
+</div>
+<ng-template #loading>
+  <p>Loading track details...</p>
+</ng-template>
