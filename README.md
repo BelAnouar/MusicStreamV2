@@ -165,6 +165,4 @@ We welcome contributions to MusicStreamV2! Please follow these steps:
 5. Open a Pull Request
 
 
----
 
-**Built with ❤️ for music lovers everywhere**
