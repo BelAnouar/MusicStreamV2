@@ -70,7 +70,7 @@ Build MusicStreamV2 from the source and install dependencies:
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/username/MusicStreamV2
+[git clone https://github.com/username/MusicStreamV2](https://github.com/BelAnouar/MusicStreamV2)
 ```
 
 2. **Navigate to the project directory:**
@@ -164,9 +164,6 @@ We welcome contributions to MusicStreamV2! Please follow these steps:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
