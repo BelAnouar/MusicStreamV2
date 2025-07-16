@@ -56,18 +56,16 @@ This project aims to deliver an engaging platform for music enthusiasts while le
 
 ## 📸 UI Previews
 
-### 🧩 App Root View
-
-![App Root](https://raw.githubusercontent.com/BelAnouar/MusicStreamV2/master/design/app-root.png)
-
-### 🖼️ Main Frame
+### 🖼️ Home Page
 
 ![Main Frame](https://raw.githubusercontent.com/BelAnouar/MusicStreamV2/master/design/Frame.png)
 
-### 🪟 Alternate Frame
+### 🪟 Albums page
 
 ![Alternate Frame](https://raw.githubusercontent.com/BelAnouar/MusicStreamV2/master/design/Frame-1.png)
 
+### 🧩 Music Page
+![App Root](https://raw.githubusercontent.com/BelAnouar/MusicStreamV2/master/design/app-root.png)
 
 ## Getting Started
 
