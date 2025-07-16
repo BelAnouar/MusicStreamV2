@@ -54,6 +54,21 @@ This project aims to deliver an engaging platform for music enthusiasts while le
 
 📊 **State Management with NgRx**: Provides a structured approach to managing application state, improving maintainability
 
+## 📸 UI Previews
+
+### 🧩 App Root View
+
+![App Root](https://raw.githubusercontent.com/BelAnouar/MusicStreamV2/master/design/app-root.png)
+
+### 🖼️ Main Frame
+
+![Main Frame](https://raw.githubusercontent.com/BelAnouar/MusicStreamV2/master/design/Frame.png)
+
+### 🪟 Alternate Frame
+
+![Alternate Frame](https://raw.githubusercontent.com/BelAnouar/MusicStreamV2/master/design/Frame-1.png)
+
+
 ## Getting Started
 
 ### Prerequisites
